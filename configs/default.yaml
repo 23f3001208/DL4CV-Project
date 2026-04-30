@@ -1,0 +1,50 @@
+# ════════════════════════════════════════════════════════════════════
+# Layered Representations — Default Configuration
+# ════════════════════════════════════════════════════════════════════
+
+# ── Segmentation ────────────────────────────────────────────────────
+segmentation:
+  model: "nvidia/segformer-b2-finetuned-ade-512-512"
+  # Alternatives:
+  #   "nvidia/segformer-b5-finetuned-ade-640-640"   (best quality, ~85M params)
+  #   "nvidia/segformer-b0-finetuned-ade-512-512"   (lightest, ~4M params)
+  min_mask_fraction: 0.001       # discard groups < 0.1% of image pixels
+
+# ── Depth Estimation ─────────────────────────────────────────────────
+depth:
+  backend: "depth_anything_v2"
+  # Alternatives: "dpt" | "midas"
+  model: null                    # null = use backend default
+  sort_metric: "median"
+  # Alternatives: "mean" | "percentile25"
+
+# ── Layer Compositor ─────────────────────────────────────────────────
+compositor:
+  soft_edge: true                # feather alpha mask edges
+  blur_radius: 3                 # Gaussian blur radius (pixels)
+  erode_radius: 1                # erosion before blurring
+
+# ── Intrinsic Decomposition (stretch goal) ───────────────────────────
+intrinsic:
+  enabled: false
+  backend: "sparse"              # "retinex" | "sparse" | "deep"
+
+# ── Runtime ──────────────────────────────────────────────────────────
+runtime:
+  device: null                   # null = auto-detect (CUDA > MPS > CPU)
+  max_image_size: 1024           # resize longest edge before inference
+
+
+# ════════════════════════════════════════════════════════════════════
+# High-Quality Config (slower, best results)
+# ════════════════════════════════════════════════════════════════════
+# segmentation:
+#   model: "nvidia/segformer-b5-finetuned-ade-640-640"
+# depth:
+#   backend: "depth_anything_v2"
+#   model: "LiheYoung/depth-anything-large-hf"
+# intrinsic:
+#   enabled: true
+#   backend: "sparse"
+# runtime:
+#   max_image_size: 1440

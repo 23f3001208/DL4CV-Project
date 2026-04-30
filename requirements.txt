@@ -1,0 +1,30 @@
+# ── Core Deep Learning ──────────────────────────────────────────────
+torch>=2.1.0
+torchvision>=0.16.0
+
+# ── HuggingFace Hub ─────────────────────────────────────────────────
+transformers>=4.40.0
+huggingface_hub>=0.21.0
+accelerate>=0.27.0
+
+# ── Computer Vision ──────────────────────────────────────────────────
+Pillow>=10.0.0
+opencv-python>=4.8.0
+numpy>=1.24.0
+scipy>=1.11.0
+
+# ── Utilities ────────────────────────────────────────────────────────
+tqdm>=4.66.0
+
+# ── Testing ──────────────────────────────────────────────────────────
+pytest>=7.4.0
+pytest-cov>=4.1.0
+
+# ── Optional: GPU / CUDA extras ──────────────────────────────────────
+# Uncomment for CUDA 12.1:
+# --index-url https://download.pytorch.org/whl/cu121
+# torch==2.2.0+cu121
+# torchvision==0.17.0+cu121
+
+# ── Optional: OpenCV contrib (for WLS filter) ───────────────────────
+# opencv-contrib-python>=4.8.0

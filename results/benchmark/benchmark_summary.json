@@ -1,0 +1,68 @@
+{
+  "config": {
+    "seg_model": "nvidia/segformer-b2-finetuned-ade-512-512",
+    "depth_backend": "depth_anything_v2",
+    "do_intrinsic": false,
+    "depth_sort_metric": "median"
+  },
+  "n_images": 5,
+  "aggregate": {
+    "composite_psnr": 29.725,
+    "composite_ssim": 0.8619,
+    "coverage": 1.0,
+    "mean_overlap_iou": 0.0,
+    "depth_spearman": 1.0
+  },
+  "per_image": [
+    {
+      "image": "photo-1.jpg",
+      "elapsed_s": 9.4,
+      "num_layers": 4,
+      "composite_psnr": 25.719,
+      "composite_ssim": 0.8382,
+      "coverage": 1.0,
+      "mean_overlap_iou": 0.0,
+      "depth_spearman": 1.0
+    },
+    {
+      "image": "photo-2.jpg",
+      "elapsed_s": 1.97,
+      "num_layers": 4,
+      "composite_psnr": 39.931,
+      "composite_ssim": 0.9519,
+      "coverage": 0.9998,
+      "mean_overlap_iou": 0.0,
+      "depth_spearman": 1.0
+    },
+    {
+      "image": "photo-3.jpg",
+      "elapsed_s": 2.05,
+      "num_layers": 6,
+      "composite_psnr": 25.098,
+      "composite_ssim": 0.7924,
+      "coverage": 1.0,
+      "mean_overlap_iou": 0.0,
+      "depth_spearman": 1.0
+    },
+    {
+      "image": "photo-4.jpg",
+      "elapsed_s": 2.03,
+      "num_layers": 3,
+      "composite_psnr": 30.828,
+      "composite_ssim": 0.8868,
+      "coverage": 1.0,
+      "mean_overlap_iou": 0.0,
+      "depth_spearman": 1.0
+    },
+    {
+      "image": "photo-5.jpg",
+      "elapsed_s": 2.09,
+      "num_layers": 3,
+      "composite_psnr": 27.051,
+      "composite_ssim": 0.8401,
+      "coverage": 1.0,
+      "mean_overlap_iou": 0.0,
+      "depth_spearman": 1.0
+    }
+  ]
+}

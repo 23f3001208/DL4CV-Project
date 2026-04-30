@@ -1,0 +1,37 @@
+{
+  "num_layers": 3,
+  "image_size": {
+    "width": 768,
+    "height": 1024
+  },
+  "depth_model": "LiheYoung/depth-anything-large-hf",
+  "depth_sort_metric": "median",
+  "soft_edge": true,
+  "intrinsic": false,
+  "layers": [
+    {
+      "rank": 0,
+      "group": "nature",
+      "mean_depth": 0.6758,
+      "median_depth": 0.8389,
+      "pixel_count": 591131,
+      "pixel_fraction": 0.7517
+    },
+    {
+      "rank": 1,
+      "group": "architecture",
+      "mean_depth": 0.9237,
+      "median_depth": 0.9394,
+      "pixel_count": 12840,
+      "pixel_fraction": 0.0163
+    },
+    {
+      "rank": 2,
+      "group": "sky",
+      "mean_depth": 0.9936,
+      "median_depth": 0.9938,
+      "pixel_count": 182461,
+      "pixel_fraction": 0.232
+    }
+  ]
+}

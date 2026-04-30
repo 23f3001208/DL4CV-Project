@@ -1,0 +1,6 @@
+image,elapsed_s,num_layers,composite_psnr,composite_ssim,coverage,mean_overlap_iou,depth_spearman
+photo-1.jpg,9.4,4,25.719,0.8382,1.0,0.0,1.0
+photo-2.jpg,1.97,4,39.931,0.9519,0.9998,0.0,1.0
+photo-3.jpg,2.05,6,25.098,0.7924,1.0,0.0,1.0
+photo-4.jpg,2.03,3,30.828,0.8868,1.0,0.0,1.0
+photo-5.jpg,2.09,3,27.051,0.8401,1.0,0.0,1.0

@@ -68,8 +68,7 @@ source .venv/bin/activate         # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 
 # Optional: GPU (CUDA 12.1)
-pip install torch==2.2.0+cu121 torchvision==0.17.0+cu121 \
-    --index-url https://download.pytorch.org/whl/cu121
+pip install torch==2.2.0+cu121 torchvision==0.17.0+cu121 --index-url https://download.pytorch.org/whl/cu121
 
 # Optional: OpenCV contrib for WLS intrinsic backend
 pip install opencv-contrib-python
@@ -95,6 +94,8 @@ python demo.py
 python demo.py --image path/to/photo.jpg --output results/my_photo
 ```
 
+Ex: python demo.py --image "D:\DL4CV Project\photo.jpg" --output results/my_photo
+
 ### With intrinsic decomposition (albedo + shading per layer)
 
 ```bash
@@ -104,12 +105,7 @@ python demo.py --image photo.jpg --intrinsic --intrinsic_backend sparse
 ### High-quality mode
 
 ```bash
-python demo.py \
-    --image photo.jpg \
-    --seg_model nvidia/segformer-b5-finetuned-ade-640-640 \
-    --depth_backend depth_anything_v2 \
-    --intrinsic \
-    --max_size 1440
+python demo.py --image "photo.jpg" --seg_model nvidia/segformer-b5-finetuned-ade-640-640 --depth_backend depth_anything_v2 --intrinsic --max_size 1440
 ```
 
 ---
@@ -169,11 +165,7 @@ results = pipe.run_batch(paths, output_dir="outputs/batch/")
 Run evaluation on a directory of images:
 
 ```bash
-python -m benchmark.eval \
-    --input  data/test_images/ \
-    --output results/benchmark/ \
-    --depth_backend depth_anything_v2 \
-    --n_images 100
+python -m benchmark.eval --input "data/test_images/" --output "results/benchmark/" --depth_backend depth_anything_v2 --n_images 100
 ```
 
 Outputs:

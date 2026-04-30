@@ -106,9 +106,27 @@ def evaluate(
     orig_arr = np.array(original.convert("RGB"))
     comp_arr = np.array(representation.composite.convert("RGB"))
 
+    if orig_arr.shape != comp_arr.shape:
+        from PIL import Image
+
+        comp_arr = np.array(
+            Image.fromarray(comp_arr).resize(
+                (orig_arr.shape[1], orig_arr.shape[0]),
+                Image.BILINEAR
+            )
+        )
+
     result.composite_psnr = psnr(orig_arr, comp_arr)
     orig_gray = np.array(original.convert("L"))
     comp_gray = np.array(representation.composite.convert("L"))
+
+    if orig_gray.shape != comp_gray.shape:
+        comp_gray = np.array(
+            Image.fromarray(comp_gray).resize(
+                (orig_gray.shape[1], orig_gray.shape[0]),
+                Image.BILINEAR
+            )
+        )
     result.composite_ssim = ssim(orig_gray, comp_gray)
 
     # ------------------------------------------------------------------

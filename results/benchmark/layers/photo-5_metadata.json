@@ -1,0 +1,37 @@
+{
+  "num_layers": 3,
+  "image_size": {
+    "width": 1024,
+    "height": 682
+  },
+  "depth_model": "LiheYoung/depth-anything-large-hf",
+  "depth_sort_metric": "median",
+  "soft_edge": true,
+  "intrinsic": false,
+  "layers": [
+    {
+      "rank": 0,
+      "group": "architecture",
+      "mean_depth": 0.4057,
+      "median_depth": 0.397,
+      "pixel_count": 69731,
+      "pixel_fraction": 0.0998
+    },
+    {
+      "rank": 1,
+      "group": "background",
+      "mean_depth": 0.4663,
+      "median_depth": 0.4055,
+      "pixel_count": 6387,
+      "pixel_fraction": 0.0091
+    },
+    {
+      "rank": 2,
+      "group": "nature",
+      "mean_depth": 0.7398,
+      "median_depth": 0.7919,
+      "pixel_count": 622250,
+      "pixel_fraction": 0.891
+    }
+  ]
+}

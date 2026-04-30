@@ -142,7 +142,7 @@ def run_benchmark(args) -> None:
     csv_path = output_path / "benchmark_results.csv"
     if all_results:
         fieldnames = list(all_results[0].keys())
-        with open(csv_path, "w", newline="") as f:
+        with open(csv_path, "w", newline="", encoding="utf-8") as f:
             w = csv.DictWriter(f, fieldnames=fieldnames)
             w.writeheader()
             w.writerows(all_results)
@@ -169,7 +169,7 @@ def run_benchmark(args) -> None:
         "per_image": all_results,
     }
     json_path = output_path / "benchmark_summary.json"
-    with open(json_path, "w") as f:
+    with open(json_path, "w", encoding="utf-8") as f:
         json.dump(summary_json, f, indent=2)
     logger.info("JSON summary saved: %s", json_path)
 
@@ -226,7 +226,7 @@ def _write_md_report(output_path: Path, summary: dict, rows: list) -> None:
           "and its actual median depth value. ρ=1 means perfect consistency.",
     ]
 
-    with open(output_path / "report.md", "w") as f:
+    with open(output_path / "report.md", "w", encoding="utf-8") as f:
         f.write("\n".join(lines))
 
 

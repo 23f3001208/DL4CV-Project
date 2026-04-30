@@ -1,0 +1,61 @@
+{
+  "num_layers": 6,
+  "image_size": {
+    "width": 1024,
+    "height": 768
+  },
+  "depth_model": "LiheYoung/depth-anything-large-hf",
+  "depth_sort_metric": "median",
+  "soft_edge": true,
+  "intrinsic": false,
+  "layers": [
+    {
+      "rank": 0,
+      "group": "background",
+      "mean_depth": 0.1592,
+      "median_depth": 0.1417,
+      "pixel_count": 3687,
+      "pixel_fraction": 0.0047
+    },
+    {
+      "rank": 1,
+      "group": "person",
+      "mean_depth": 0.3176,
+      "median_depth": 0.3132,
+      "pixel_count": 2373,
+      "pixel_fraction": 0.003
+    },
+    {
+      "rank": 2,
+      "group": "furniture",
+      "mean_depth": 0.375,
+      "median_depth": 0.3221,
+      "pixel_count": 62740,
+      "pixel_fraction": 0.0798
+    },
+    {
+      "rank": 3,
+      "group": "architecture",
+      "mean_depth": 0.5338,
+      "median_depth": 0.514,
+      "pixel_count": 161559,
+      "pixel_fraction": 0.2054
+    },
+    {
+      "rank": 4,
+      "group": "nature",
+      "mean_depth": 0.7961,
+      "median_depth": 0.9081,
+      "pixel_count": 466581,
+      "pixel_fraction": 0.5933
+    },
+    {
+      "rank": 5,
+      "group": "sky",
+      "mean_depth": 0.9785,
+      "median_depth": 0.983,
+      "pixel_count": 89492,
+      "pixel_fraction": 0.1138
+    }
+  ]
+}

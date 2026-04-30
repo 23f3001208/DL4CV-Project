@@ -1,0 +1,45 @@
+{
+  "num_layers": 4,
+  "image_size": {
+    "width": 768,
+    "height": 1024
+  },
+  "depth_model": "LiheYoung/depth-anything-large-hf",
+  "depth_sort_metric": "median",
+  "soft_edge": true,
+  "intrinsic": false,
+  "layers": [
+    {
+      "rank": 0,
+      "group": "architecture",
+      "mean_depth": 0.4306,
+      "median_depth": 0.3165,
+      "pixel_count": 41905,
+      "pixel_fraction": 0.0533
+    },
+    {
+      "rank": 1,
+      "group": "vehicle",
+      "mean_depth": 0.4871,
+      "median_depth": 0.4629,
+      "pixel_count": 42204,
+      "pixel_fraction": 0.0537
+    },
+    {
+      "rank": 2,
+      "group": "nature",
+      "mean_depth": 0.5307,
+      "median_depth": 0.5047,
+      "pixel_count": 154919,
+      "pixel_fraction": 0.197
+    },
+    {
+      "rank": 3,
+      "group": "sky",
+      "mean_depth": 0.9837,
+      "median_depth": 0.9865,
+      "pixel_count": 547062,
+      "pixel_fraction": 0.6956
+    }
+  ]
+}
